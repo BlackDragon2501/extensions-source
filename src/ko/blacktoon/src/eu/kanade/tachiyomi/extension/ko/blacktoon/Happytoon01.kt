@@ -21,15 +21,14 @@ import kotlin.random.Random
 
 class BlackToon : HttpSource() {
 
-    override val name = "블랙툰"
+    override val name = "해피툰"
 
     override val lang = "ko"
 
     private var currentBaseUrlHost = ""
-    override val baseUrl = "https://happytoon01.com"
+    override val baseUrl = "https://happytoon01.com/webtoon/title/"
 
-    private val cdnUrl = "https://blacktoonimg.com/"
-
+    private val cdnUrl = "https://happytoon01.com/"
     override val supportsLatest = true
 
     override val client = network.cloudflareClient.newBuilder().addInterceptor { chain ->
